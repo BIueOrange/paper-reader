@@ -1,0 +1,23 @@
+{
+  "skill_name": "paper-reader",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "为这篇可选文本 PDF 生成 HTML 批判性阅读笔记。不要只读摘要；图表要放在首次实质讨论的位置；每条论文事实要带稳定页码和块编号；批判性判断必须与论文证据分开。",
+      "expected_output": "An HTML reading note with complete-paper coverage, inline figure/table assets, source anchors, a valid source_map.json, reading_notes.md, and evidence/inference labels.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "这是一篇扫描 PDF。请做 OCR 后生成批判性阅读笔记；不确定的文字和近似裁图必须明确标出来。",
+      "expected_output": "A draft-aware HTML note with per-block confidence, uncertainty disclosures, stable source IDs, and cropped visual evidence where feasible.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "我只有 DOI。请解析后阅读可访问的版本；若只能获得摘要，明确说明不能确认哪些正文内容。",
+      "expected_output": "A resolved multi-stage source workflow that records the version read, re-routes to the resolved artifact, and produces an explicitly bounded draft when full text is unavailable.",
+      "files": []
+    }
+  ]
+}

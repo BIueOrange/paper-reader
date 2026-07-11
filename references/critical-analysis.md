@@ -48,3 +48,6 @@ What does this paper leave unanswered?
 - Be specific: "Only tested on Al9.5CrCoNi — unknown if CMRO exists in other H/MEA compositions" not "limited scope"
 - Balance is key: a paper can be excellent AND have real limitations
 - If a paper is genuinely weak in an area, say so directly — don't soften the critique
+- Prefix paper-backed statements with `论文证据:` and cite page/block IDs.
+- Prefix the skill's own interpretation with `分析推断:` and name the evidence IDs it relies on.
+- Do not present an absence of reporting as evidence of absence; say `论文未明确说明` when the source is silent.

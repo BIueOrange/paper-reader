@@ -17,8 +17,8 @@ If the PDF is too long or partially unreadable, still create a draft and mark mi
 - A single HTML file with professional typography and figures embedded inline
 - Figures cropped tightly and placed near their first substantive mention — not at the end
 - Original figure captions preserved with Chinese translations
-- Critical analysis alongside extracted content (not instead of it)
-- Source anchors (page numbers) for every substantive claim
+- Critical analysis alongside extracted content (not instead of it), visibly marked as analysis
+- Stable source anchors (`p.3 S012`, `p.4 C001`, `F001`, `T001`) for every substantive paper claim
 - Key English technical terms preserved alongside Chinese
 
 ## What the output is NOT
@@ -27,6 +27,17 @@ If the PDF is too long or partially unreadable, still create a draft and mark mi
 - A machine translation dump
 - Figures dumped at the bottom of the file
 - A chat-friendly summary without visual evidence
+- Critical analysis presented as though it were a paper claim
+
+## Evidence discipline
+
+Build the notes from a stable evidence map before writing narrative prose. Every paper-backed statement must carry a page plus block ID where available. When pages are unavailable, use a section plus block ID and state that limitation.
+
+Keep two kinds of statements distinct:
+- **论文证据**: a finding, method detail, number, or author-stated limitation with source anchors
+- **分析推断**: the skill's interpretation, critique, or extrapolation, with the evidence IDs it relies on
+
+Never fabricate an anchor, a figure crop, a metric, or a missing section. Record retrieval, OCR, layout, and crop uncertainty in `reading_notes.md`.
 
 ## Figure philosophy
 
@@ -42,4 +53,4 @@ Good output feels like a well-designed journal club presentation:
 - A colleague can understand the paper's contribution, method, and limitations without reading the original
 - Every figure is inspectable in context
 - Critical analysis is specific, not generic praise
-- The reader can trace any claim back to its page in the original
+- The reader can trace paper claims to a page and stable block, then tell them apart from analysis

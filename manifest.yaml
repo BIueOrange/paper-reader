@@ -2,6 +2,8 @@
 
 source_format:
   values: [pdf-text, scanned-pdf, html, doi-arxiv, pasted-text]
+  default: pdf-text
+  multi: true
   detect: |
     - pdf-text: user provides a PDF file path with selectable text layer (most common).
     - scanned-pdf: PDF whose pages render as images only (no extractable text layer).
@@ -26,3 +28,4 @@ references:
     figure-extraction: references/figure-extraction.md
     output-spec: references/output-spec.md
     critical-analysis: references/critical-analysis.md
+    grounding-rules: references/grounding-rules.md

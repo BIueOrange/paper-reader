@@ -17,15 +17,16 @@ The primary output is a single self-contained HTML file with embedded CSS. Use t
 2. **One-liner**: standout callout box (accent color left border)
 3. **研究动机** (Motivation)
 4. **核心方法** (Core Method)
-5. **实验结果** (Experiments & Results) — figures embedded inline here
-6. **批判性分析** (Critical Analysis) — 5-dimension card grid
-7. **与我何干** (Personal Relevance)
-8. **值得深挖的引用** (References to Follow Up)
-9. **Footer**: generation date, source paper
+5. **实验结果** (Experiments & Results) — figures and tables embedded near the relevant discussion
+6. **结论** (Conclusions)
+7. **批判性分析** (Critical Analysis) — 5-dimension card grid
+8. **与我何干** (Personal Relevance)
+9. **值得深挖的引用** (References to Follow Up)
+10. **Footer**: generation date, source paper
 
 ## Figure blocks within the flow
 
-Figures are part of the narrative, not an appendix. Place them in the "实验结果" section at their first substantive mention. Each figure block:
+Figures and tables are part of the narrative, not an appendix. Place them at their first substantive mention, whether that is the method or results section. Each figure block:
 
 ```html
 <figure>
@@ -38,6 +39,17 @@ Figures are part of the narrative, not an appendix. Place them in the "实验结
   </figcaption>
 </figure>
 ```
+
+Give every substantive HTML block a stable `id` and a visible source pointer. For example:
+
+```html
+<section id="S012" data-source="p.3 S012">
+  <p class="source-anchor">来源: p.3 S012</p>
+  <p>论文证据: ...</p>
+</section>
+```
+
+Use `论文证据` for statements grounded in the paper. Put interpretations in a visually distinct `分析推断` block and list the source IDs that support it. Figure and table blocks use `F001`/`T001` IDs and name both their caption ID and placement block.
 
 For paired figures placed side-by-side, use a CSS grid:
 
@@ -70,3 +82,7 @@ Default: plain text (no LaTeX). Use Unicode and plain notation:
 - Sums: sum_{i=1}^{n}
 
 Only use LaTeX ($$...$$) when the user explicitly requests it.
+
+## Supporting evidence files
+
+Keep `source_map.json` alongside the HTML. It must include paper metadata plus an entry for every `S`, `C`, `F`, and `T` ID used in the page. Each entry records the source page or section, type, confidence, and references to connected figures/tables. `reading_notes.md` records draft status, unavailable sections, OCR uncertainty, approximate crops, and the exact source version used.
